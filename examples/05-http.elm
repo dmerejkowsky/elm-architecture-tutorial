@@ -88,7 +88,7 @@ getRandomGif : String -> Cmd Msg
 getRandomGif topic =
   let
     url =
-      "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
+      "https://api.giphy.com/v42/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
   in
     Http.send NewGif (Http.get url decodeGifUrl)
 
